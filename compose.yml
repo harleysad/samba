@@ -3,7 +3,7 @@ services:
     image: dockurr/samba
     container_name: samba
     environment:
-      NAME: ${environment.SHARE_PATH}
+      NAME: ${{environment.SHARE_PATH}}
       USER: ${SHARE_USER}
       PASS: ${SHARE_PASS}
       RW: true      # Optional, default true
