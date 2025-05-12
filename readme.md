@@ -1,6 +1,14 @@
-<div align="center">
-<a href="https://github.com/dockur/samba"><img src="https://raw.githubusercontent.com/dockur/samba/master/.github/logo.png" title="Logo" style="max-width:100%;" width="256" /></a>
+<div>
+  <p> Fork of <a href="https://github.com/dockur/samba>dockur/samba</a>.<br/>
+  I've changed:</p>
+            <ul>
+              <li>smb.conf for more shared devices</ul>
+              <li>compose.yml for use env vars. (protected at coolify)</ul>
+            </ul>
+  
+  <p> Follow the original readme.me, or check the original rempo.</p>
 </div>
+
 <div align="center">
 
 [![Build]][build_url]
