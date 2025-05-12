@@ -12,5 +12,5 @@ services:
     ports:
       - 445:445
     volumes:
-      - /${SHARE_PATH}:/storage  # (docker volume/bind):(smb.conf share config ponint)
+      - /${production.SHARE_PATH}:/storage  # (docker volume/bind):(smb.conf share config ponint)
     restart: unless-stopped
