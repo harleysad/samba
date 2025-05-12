@@ -3,7 +3,7 @@ services:
     image: dockurr/samba
     container_name: samba
     environment:
-      # NAME: ${SHARE_NAME}
+      NAME: ${environment.SHARE_PATH}
       USER: ${SHARE_USER}
       PASS: ${SHARE_PASS}
       RW: true      # Optional, default true
@@ -12,5 +12,5 @@ services:
     ports:
       - 445:445
     volumes:
-      - /${environment.SHARE_PATH}:/storage  # (docker volume/bind):(smb.conf share config ponint)
+      - /${SHARE_PATH}:/storage  # (docker volume/bind):(smb.conf share config ponint)
     restart: unless-stopped
