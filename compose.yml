@@ -13,4 +13,4 @@ services:
       - 445:445
     volumes:
       - ${SHARE_PATH}:/storage  # (docker volume/bind):(smb.conf share config ponint)
-    restart: always
+    restart: unless-stopped
