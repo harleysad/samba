@@ -6,8 +6,9 @@
               <li>compose.yml for use env vars. (protected at coolify)</ul>
             </ul>
   
-  <p> Follow the original readme.me, or check the original rempo.</p>
+  <p> Follow the original readme.me, or check the original repo.</p>
 </div>
+
 </h1>
 
 Docker container of [Samba](https://www.samba.org/), an implementation of the Windows SMB networking protocol.
