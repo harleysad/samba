@@ -1,6 +1,6 @@
 <div>
-  <p> Fork of <a href="https://github.com/dockur/samba>dockur/samba</a>.<br/>
-  I've changed:</p>
+  <p> Fork of <a href="https://github.com/dockur/samba">dockur/samba</a>.<br/>
+    I've changed:</p>
             <ul>
               <li>smb.conf for more shared devices</ul>
               <li>compose.yml for use env vars. (protected at coolify)</ul>
