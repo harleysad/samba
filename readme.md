@@ -8,16 +8,7 @@
   
   <p> Follow the original readme.me, or check the original rempo.</p>
 </div>
-
-<div align="center">
-
-[![Build]][build_url]
-[![Version]][tag_url]
-[![Size]][tag_url]
-[![Package]][pkg_url]
-[![Pulls]][hub_url]
-
-</div></h1>
+</h1>
 
 Docker container of [Samba](https://www.samba.org/), an implementation of the Windows SMB networking protocol.
 
