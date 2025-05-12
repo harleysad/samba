@@ -3,10 +3,10 @@ services:
     image: dockurr/samba
     container_name: samba
     environment:
-      NAME: ${environment.SHARE_PATH}
+      NAME: ${SHARE_PATH}
       USER: ${SHARE_USER}
       PASS: ${SHARE_PASS}
-      RW: true      # Optional, default true
+      RW: true     # Optional, default true
       UID: 1000    # Optional, default 1000
       GID: 1000    # Optional, default 1000
     ports:
