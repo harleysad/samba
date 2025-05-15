@@ -2,7 +2,8 @@
 FROM debian:latest
 
 # Copia o arquivo para dentro do contêiner
-# COPY entrypoint.sh /entrypoint.sh  
+# COPY entrypoint.sh /entrypoint.sh
+  
 # Update package lists and install required tools
 RUN apt-get update && \
     apt-get install -y \
