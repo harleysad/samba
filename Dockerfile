@@ -12,4 +12,4 @@ RUN apt-get update && \
 
 
 # The container will run tail -f /dev/null to keep running
-ENTRYPOINT tail -f /teste.txt 
+ENTRYPOINT tail -f /dev/null 
