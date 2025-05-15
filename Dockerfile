@@ -12,4 +12,4 @@ RUN apt-get update && \
     p7* sudo btop neovim
 
 # The container will run tail -f /dev/null to keep running
-ENTRYPOINT tail -f /dev/null 
+ENTRYPOINT tail -f /dev/null
