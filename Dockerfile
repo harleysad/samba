@@ -10,6 +10,5 @@ RUN apt-get update && \
     vim htop neofetch tree lsof strace tmux iputils-* \
     p7* sudo btop neovim
 
-
 # The container will run tail -f /dev/null to keep running
 ENTRYPOINT tail -f /dev/null 
