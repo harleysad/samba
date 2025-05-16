@@ -3,7 +3,10 @@ FROM alpine:latest
 
 # Copia o arquivo para dentro do contêiner
 COPY --chmod=0755 samba.sh /samba.sh
-  
+
+RUN apk update && \
+    apk add --no-cache \
+    coreutils samba shadow   
 # Update package lists and install required tools
 # RUN apt-get update && \
 #     apt-get install -y \
