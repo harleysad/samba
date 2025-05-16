@@ -6,7 +6,7 @@ COPY --chmod=0755 samba.sh /samba.sh
 
 RUN apk update && \
     apk add --no-cache \
-    ionice bash sudo coreutils samba shadow   
+    bash sudo coreutils samba shadow   
 # Update package lists and install required tools
 # RUN apt-get update && \
 #     apt-get install -y \
