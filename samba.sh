@@ -6,37 +6,37 @@ PASSWORD=$SENHA_UBT
 DATADIR=$VSCODE_DATA_DIR
 GROUP="users"
 
-# -----------------------------------------------------------------------------
-# 1- Configração para um usuario padrão e permissoes de acesso
-# -----------------------------------------------------------------------------
-# Verifica se o grupo 'users' existe
-if ! getent group $GROUP > /dev/null 2>&1; then
-    # se nao existe cria
-    groupadd $GROUP
-fi
-# Verifica se já existe um usuário com o UID fornecido
-if getent passwd "$USER_ID" >/dev/null 2>&1; then
-    # Armazena o nome original
-    USER_NAMEI=$(getent passwd "$USER_ID" | cut -d: -f1)
-    # Altera o nome do usuario parão para o da variavel
-    usermod -l $USER_NAME $USER_NAMEI
-    # Ajusta o diretório home
-    mv /home/$USER_NAMEI /home/$USER_NAME
-    usermod -d /home/$USER_NAME -m $USER_NAME
-else
-    # cria o novo usuário
-    useradd -m -u $USER_ID -s /bin/bash $USER_NAME
-fi
+# # -----------------------------------------------------------------------------
+# # 1- Configração para um usuario padrão e permissoes de acesso
+# # -----------------------------------------------------------------------------
+# # Verifica se o grupo 'users' existe
+# if ! getent group $GROUP > /dev/null 2>&1; then
+#     # se nao existe cria
+#     groupadd $GROUP
+# fi
+# # Verifica se já existe um usuário com o UID fornecido
+# if getent passwd "$USER_ID" >/dev/null 2>&1; then
+#     # Armazena o nome original
+#     USER_NAMEI=$(getent passwd "$USER_ID" | cut -d: -f1)
+#     # Altera o nome do usuario parão para o da variavel
+#     usermod -l $USER_NAME $USER_NAMEI
+#     # Ajusta o diretório home
+#     mv /home/$USER_NAMEI /home/$USER_NAME
+#     usermod -d /home/$USER_NAME -m $USER_NAME
+# else
+#     # cria o novo usuário
+#     useradd -m -u $USER_ID -s /bin/bash $USER_NAME
+# fi
 
-# Muda o grupo parao do usuário
-usermod -g $GROUP $USER_NAME
-# Altera a senha
-echo "$USER_NAME:$PASSWORD" | chpasswd
-# Usuario vai ter sudo
-usermod -aG sudo $USER_NAME
-#------------------------------------------------------------------------------
+# # Muda o grupo parao do usuário
+# usermod -g $GROUP $USER_NAME
+# # Altera a senha
+# echo "$USER_NAME:$PASSWORD" | chpasswd
+# # Usuario vai ter sudo
+# usermod -aG sudo $USER_NAME
+# #------------------------------------------------------------------------------
 
-# Executa a aplicação com o usuário especificado
-runuser -l $USER_NAME -c "umask 0002 && \
-                        tail -f /dev/null "
-# tail -f /dev/null
+# # Executa a aplicação com o usuário especificado
+# runuser -l $USER_NAME -c "umask 0002 && \
+#                         tail -f /dev/null "
+tail -f /dev/null
