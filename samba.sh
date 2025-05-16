@@ -9,7 +9,6 @@ GROUP="users"
 # -----------------------------------------------------------------------------
 # 1- Configração para um usuario padrão e permissoes de acesso
 # -----------------------------------------------------------------------------
-
 # Verifica se o grupo 'users' existe
 if ! getent group $GROUP > /dev/null 2>&1; then
     # se nao existe cria
