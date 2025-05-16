@@ -11,5 +11,6 @@ services:
       - VSCODE_DATA_DIR=${VSCODE_DATA_DIR:-~/datadir}
     entrypoint: "/samba.sh"
     ports:
-      - 445
+      - "445:445"
+      - "139:139"
     restart: unless-stopped
