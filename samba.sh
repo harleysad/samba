@@ -12,7 +12,7 @@ GROUP="users"
 # Verifica se o grupo 'users' existe
 if ! getent group $GROUP > /dev/null 2>&1; then
     # se nao existe cria
-    sudo groupadd $GROUP
+    groupadd $GROUP
 fi
 # Verifica se já existe um usuário com o UID fornecido
 if getent passwd "$USER_ID" >/dev/null 2>&1; then
@@ -29,7 +29,7 @@ else
 fi
 
 # Muda o grupo parao do usuário
-sudo usermod -g $GROUP $USER_NAME
+usermod -g $GROUP $USER_NAME
 # Altera a senha
 echo "$USER_NAME:$PASSWORD" | chpasswd
 # Usuario vai ter sudo
