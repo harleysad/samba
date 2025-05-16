@@ -1,7 +1,7 @@
 #!/bin/sh
 
 USER_ID=1000 # Id do primeiro usuario linux
-USER_NAME="Coder"
+USER_NAME=$DEFAULT_USER # Nome do usuario padrao
 PASSWORD=$SENHA_UBT
 DATADIR=$VSCODE_DATA_DIR
 GROUP="users"
