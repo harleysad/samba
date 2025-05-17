@@ -50,6 +50,6 @@ smbpasswd -e "$USER_NAME"
 
 
 # Executa a aplicação com o usuário especificado
-runuser -l $USER_NAME -c "umask 0002 && \
-                        tail -f /dev/null "
+# runuser -l $USER_NAME -c "umask 0002 && \
+#                         tail -f /dev/null "
 tail -f /dev/null

@@ -18,4 +18,4 @@ COPY --chmod=0755 samba.sh /samba.sh
 COPY --chmod=0644 smb.conf /etc/samba/smb.conf
 
 # The container will run tail -f /dev/null to keep running
-ENTRYPOINT tail -f /dev/null
+# ENTRYPOINT tail -f /dev/null
