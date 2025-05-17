@@ -62,5 +62,5 @@ sudo chown  $USER_NAME:$GROUP /var/lib/samba/usershares
 # Executa a aplicação com o usuário especificado
 # runuser -l $USER_NAME -c "umask 0002 && \
 #                         tail -f /dev/null "
-# tail -f /dev/null
-smbd -F
+tail -f /dev/null
+# smbd -F
