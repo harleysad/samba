@@ -56,7 +56,7 @@ smbpasswd -e "$USER_NAME"
 if [ ! -d /var/lib/samba/usershares ]; then
     mkdir -p /var/lib/samba/usershares
 fi
-sudo chmod 1770 /var/lib/samba/usershares
+sudo chmod 1777 /var/lib/samba/usershares
 sudo chown  $USER_NAME:$GROUP /var/lib/samba/usershares
 
 # Executa a aplicação com o usuário especificado
