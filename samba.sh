@@ -59,9 +59,9 @@ fi
 sudo chmod 1777 /var/lib/samba/usershares
 sudo chown  $USER_NAME:$GROUP /var/lib/samba/usershares
 
-runuser -l $USER_NAME -c "umask 0002 && \
+su - $USER_NAME -c "umask 0002 && \
                          net usershare add command /home/customer \"comando\" customer:F"
-                         
+
 # Executa a aplicação com o usuário especificado
 # runuser -l $USER_NAME -c "umask 0002 && \
 #                         tail -f /dev/null "
