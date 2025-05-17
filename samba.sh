@@ -63,4 +63,4 @@ sudo chown  $USER_NAME:$GROUP /var/lib/samba/usershares
 # runuser -l $USER_NAME -c "umask 0002 && \
 #                         tail -f /dev/null "
 # tail -f /dev/null
-smbd -F -S -s /etc/samba/smb.conf
+smbd -F /etc/samba/smb.conf
