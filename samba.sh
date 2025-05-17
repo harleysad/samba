@@ -41,13 +41,15 @@ echo "$USER_NAME:$PASSWORD" | chpasswd
 # Usuario vai ter sudo
 usermod -aG $GROUP_SUDO $USER_NAME
 #------------------------------------------------------------------------------
-(echo "$PASSWORD"; echo "$USER_NAME")
 
+# -----------------------------------------------------------------------------
+# 2- Configuração do Samba
+# -----------------------------------------------------------------------------
 # Adiciona o usuário ao banco de dados do Samba
-(echo "$PASSWORD"; echo "$PASSWORD") | smbpasswd -a "$USER_NAME" --stdin
+(echo "$PASSWORD"; echo "$PASSWORD") | smbpasswd -a -s "$USER_NAME" 
 # Habilita o usuário no Samba
 smbpasswd -e "$USER_NAME"
-
+# -----------------------------------------------------------------------------
 
 
 # Executa a aplicação com o usuário especificado
