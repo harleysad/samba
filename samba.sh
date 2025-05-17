@@ -15,11 +15,6 @@ if ! getent group $GROUP_SUDO > /dev/null 2>&1; then
     # se nao existe cria
     groupadd $GROUP_SUDO
 fi
-
-
-# -----------------------------------------------------------------------------
-# 1- Configração para um usuario padrão e permissoes de acesso
-# -----------------------------------------------------------------------------
 # Verifica se o grupo 'users' existe
 if ! getent group $GROUP > /dev/null 2>&1; then
     # se nao existe cria
@@ -46,6 +41,13 @@ echo "$USER_NAME:$PASSWORD" | chpasswd
 # Usuario vai ter sudo
 usermod -aG $GROUP_SUDO $USER_NAME
 #------------------------------------------------------------------------------
+
+# Adiciona o usuário ao banco de dados do Samba
+(echo "$PASSWORD"; echo "$PASSWORD") | smbpasswd -a "$USER_NAME" --stdin
+# Habilita o usuário no Samba
+smbpasswd -e "$USER_NAME"
+
+
 
 # Executa a aplicação com o usuário especificado
 runuser -l $USER_NAME -c "umask 0002 && \
