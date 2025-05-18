@@ -1,10 +1,11 @@
 # Use the latest Debian image
-FROM alpine:latest
+FROM debian:bullseye-slim
+
 
 # Copia o arquivo para dentro do contêiner
 
-RUN apk update && \
-apk add --no-cache \
+RUN aptupdate && \
+apt install -y \
 bash sudo coreutils samba shadow   
 # Update package lists and install required tools
 # RUN apt-get update && \
