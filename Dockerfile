@@ -4,9 +4,9 @@ FROM debian:bullseye-slim
 
 # Copia o arquivo para dentro do contêiner
 
-RUN aptupdate && \
+RUN apt update && \
 apt install -y \
-bash sudo samba    
+bash sudo samba sudo     
 # Update package lists and install required tools
 # RUN apt-get update && \
 #     apt-get install -y \
