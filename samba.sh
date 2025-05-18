@@ -56,11 +56,11 @@ smbpasswd -e "$USER_NAME"
 if [ ! -d /var/lib/samba/usershares ]; then
     mkdir -p /var/lib/samba/usershares
 fi
-sudo chmod 1777 /var/lib/samba/usershares
+sudo chmod 777 /var/lib/samba/usershares
 sudo chown  $USER_NAME:$GROUP /var/lib/samba/usershares
 
 su - $USER_NAME -c "umask 0002 && \
-                         net usershare add command /home/customer \"comando\" customer:F"
+                    net usershare add command /home/customer \"comando\" customer:F"
 
 # Executa a aplicação com o usuário especificado
 # runuser -l $USER_NAME -c "umask 0002 && \
