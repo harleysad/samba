@@ -1,5 +1,5 @@
 # Use the latest Debian image
-FROM debian:bullseye-slim
+FROM debian:latest
 
 
 # Copia o arquivo para dentro do contêiner
