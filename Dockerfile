@@ -6,7 +6,7 @@ FROM debian:bullseye-slim
 
 RUN aptupdate && \
 apt install -y \
-bash sudo coreutils samba shadow   
+bash sudo samba    
 # Update package lists and install required tools
 # RUN apt-get update && \
 #     apt-get install -y \
